@@ -8,5 +8,16 @@
 <body>
 	<div id="container">
 	<h2>Actividad 9</h2>
+	<h3>Introduzca el texto que desee invertir:</h3>
+	<input type="text" id="string">
+	<button onclick="alert(reverse(document.getElementById('string').value))" onfocus="this.value=''">Invertir</button>
+	<script>
+		const reverse = str => Array.from(str).reverse().join('');
+		document.getElementById("string").onfocus = function() {clear()};
+		function clear() {
+			document.getElementById("string").value = "";
+		}		
+	</script>
+	</div>
 </body>
 </html>
